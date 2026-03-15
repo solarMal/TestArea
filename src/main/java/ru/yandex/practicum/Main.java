@@ -5,24 +5,11 @@ import ru.yandex.practicum.managers.Managers;
 import ru.yandex.practicum.models.Task;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
-        InMemoryTaskManager inMemoryTaskManager = Managers.getInMemoryTaskManager();
-
-        Task firstTask = new Task("firstTask", "descriptionFirstTask");
-        Task secondTask = new Task("secondTask", "descriptionSecondTask");
-
-        inMemoryTaskManager.createTask(firstTask);
-        Task task1 = inMemoryTaskManager.getTask(firstTask.getId());
-
-        inMemoryTaskManager.createTask(secondTask);
-        Task task2 = inMemoryTaskManager.getTask(secondTask.getId());
-
-        List<Task> tasks = inMemoryTaskManager.getAllTasks();
-
-        for (Task task : tasks) {
-            System.out.println(task);
-        }
+        Predicate<Integer> predicate = (num) -> (num % 2) == 0;
+        System.out.println("число чётное? " + predicate.test(151254));
     }
 }
