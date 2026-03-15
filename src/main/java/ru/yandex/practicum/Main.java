@@ -27,5 +27,8 @@ public class Main {
         }
 
         System.out.println("ёу");
+
+        Predicate<Integer> predicate = (num) -> (num % 2) == 0;
+        System.out.println("число чётное? " + predicate.test(332));
     }
 }
