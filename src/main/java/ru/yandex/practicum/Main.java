@@ -5,6 +5,7 @@ import ru.yandex.practicum.managers.Managers;
 import ru.yandex.practicum.models.Task;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,5 +25,7 @@ public class Main {
         for (Task task : tasks) {
             System.out.println(task);
         }
+
+        System.out.println("ёу");
     }
 }
